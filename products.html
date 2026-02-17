@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Meta Tags for SEO & Responsiveness -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore NicyFoods complete range of 25+ handmade ladoos. Traditional, herbal, millet-based, and baby-friendly options. Pure ghee, natural jaggery, no preservatives.">
+  <meta name="keywords" content="ladoos, handmade sweets, healthy snacks, herbal ladoos, traditional ladoos, millet ladoos, baby food">
+  <meta name="author" content="NicyFoods">
+  <meta name="theme-color" content="#e67e22">
+
+  <title>Our Products - NicyFoods Handmade Ladoos</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ===== HEADER / NAVIGATION ===== -->
+  <header>
+    <div class="container">
+      <nav class="navbar">
+        <!-- Logo -->
+        <div class="logo">
+          <img src="images/logo.png" alt="NicyFoods Logo" class="logo-image">
+          <span>NicyFoods</span>
+        </div>
+
+        <!-- Navigation Menu -->
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="products.html" class="nav-link">Products</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+
+        <!-- Mobile Hamburger Menu -->
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== PRODUCTS HERO SECTION ===== -->
+  <section class="hero" id="products-hero" style="background-image: url('images/products_hero.jpg');">
+    <div class="hero-content">
+      <h1>Our Premium Collection</h1>
+      <p class="hero-subheading">25+ Handmade Ladoo Varieties for Every Health Need</p>
+    </div>
+  </section>
+
+  <!-- ===== PRODUCTS SECTION ===== -->
+  <section class="white-bg">
+    <div class="container-lg">
+      <h2 class="text-center mb-3">Explore All Products</h2>
+      <p class="text-center text-light mb-3" style="max-width: 700px; margin-left: auto; margin-right: auto;">
+        Filter our collection by category to find the perfect handmade ladoo for your needs. Each product is crafted with pure ingredients and traditional methods.
+      </p>
+
+      <!-- Filter Buttons -->
+      <div class="filter-section">
+        <button class="filter-btn active" data-filter="all">All Products</button>
+        <button class="filter-btn" data-filter="traditional">Traditional</button>
+        <button class="filter-btn" data-filter="herbal">Herbal</button>
+        <button class="filter-btn" data-filter="millet">Millet</button>
+        <button class="filter-btn" data-filter="baby-friendly">Baby Friendly</button>
+      </div>
+
+      <!-- Products Grid -->
+      <div class="products-grid"></div>
+
+      <!-- Empty State (Hidden by default) -->
+      <div class="text-center mt-3" style="display: none;">
+        <p style="color: var(--text-light); font-size: 1.1rem;">No products found. Please try another filter.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PRODUCT CATEGORIES INFO SECTION ===== -->
+  <section class="light-bg">
+    <div class="container">
+      <h2 class="text-center mb-3">Product Categories</h2>
+      
+      <div class="highlights-grid">
+        <!-- Traditional Category -->
+        <div class="highlight-card">
+          <span class="highlight-icon">👑</span>
+          <h3>Traditional Ladoos</h3>
+          <p>
+            Classic recipes passed down through generations. Peanut, Sesame, Coconut, and Date varieties loaded with natural nutrients and authentic taste.
+          </p>
+        </div>
+
+        <!-- Herbal Category -->
+        <div class="highlight-card">
+          <span class="highlight-icon">🌿</span>
+          <h3>Herbal Ladoos</h3>
+          <p>
+            Formulated with Ayurvedic herbs and superfoods. Ashwagandha, Tulsi, Moringa, Beetroot, and Shatavari varieties for targeted wellness benefits.
+          </p>
+        </div>
+
+        <!-- Millet Category -->
+        <div class="highlight-card">
+          <span class="highlight-icon">🌾</span>
+          <h3>Millet Ladoos</h3>
+          <p>
+            Ancient grain nutrition in modern recipes. Naturally gluten-free, high in fiber, sustainably sourced, and perfect for digestive health.
+          </p>
+        </div>
+
+        <!-- Baby Friendly Category -->
+        <div class="highlight-card">
+          <span class="highlight-icon">👶</span>
+          <h3>Baby Friendly</h3>
+          <p>
+            Specially formulated for little ones from 8 months onwards. Gentle ingredients, easy digestion, no allergens, and packed with essential nutrition.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== QUALITY ASSURANCE SECTION ===== -->
+  <section class="white-bg">
+    <div class="container">
+      <h2 class="text-center mb-3">Quality Assurance</h2>
+      
+      <div class="highlights-grid">
+        <div class="highlight-card">
+          <span class="highlight-icon">✅</span>
+          <h3>100% Pure Ghee</h3>
+          <p>Authenticated pure clarified butter for authentic taste and superior nutrition in every product.</p>
+        </div>
+
+        <div class="highlight-card">
+          <span class="highlight-icon">🍯</span>
+          <h3>Natural Jaggery</h3>
+          <p>Unrefined jaggery providing natural sweetness with essential minerals and nutrients.</p>
+        </div>
+
+        <div class="highlight-card">
+          <span class="highlight-icon">❌</span>
+          <h3>No Maida</h3>
+          <p>Completely free from refined flour and wheat maida for cleaner nutrition.</p>
+        </div>
+
+        <div class="highlight-card">
+          <span class="highlight-icon">🚫</span>
+          <h3>No Preservatives</h3>
+          <p>Zero artificial preservatives, colors, essence, or any synthetic additives whatsoever.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA SECTION ===== -->
+  <section class="light-bg" style="padding: 60px 0;">
+    <div class="container text-center">
+      <h2 style="color: var(--primary-color); margin-bottom: 1.5rem;">Ready to Order?</h2>
+      <p style="font-size: 1.1rem; margin-bottom: 2rem; color: var(--text-light);">
+        Select a product to view details and place your order. Contact us for bulk orders and special requests.
+      </p>
+      <a href="contact.html" class="btn btn-secondary" style="font-size: 1.05rem; padding: 14px 32px;">
+        Contact Us for Orders →
+      </a>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="container-lg">
+      <div class="footer-content">
+        <!-- About -->
+        <div class="footer-section">
+          <h4>About NicyFoods</h4>
+          <p>
+            NicyFoods is a trusted brand of handmade healthy food products established in 2017. We create premium ladoos with pure ghee, natural jaggery, and no harmful additives.
+          </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Products -->
+        <div class="footer-section">
+          <h4>Popular Products</h4>
+          <ul>
+            <li><a href="products.html">Peanut Laddu</a></li>
+            <li><a href="products.html">Khajur Laddu</a></li>
+            <li><a href="products.html">Ashwagandha Laddu</a></li>
+            <li><a href="products.html">Moringa Laddu</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="footer-section">
+          <h4>Get in Touch</h4>
+          <p>
+            <strong>Phone:</strong> <a href="tel:+918263001410">+91 8263001410</a>
+          </p>
+          <p>
+            <strong>Email:</strong> <a href="mailto:nkcyfoods5@gmail.com">nkcyfoods5@gmail.com</a>
+          </p>
+          <p>
+            <strong>Address:</strong> Plot No 20, Saikrupa Society, Ingale Nagar, Warje Jakat Naka, Warje, Pune – 411052
+          </p>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <p>&copy; 2017-2024 NicyFoods. All Rights Reserved. | Handcrafted with ❤️ | Premium Healthy Ladoos</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="js/script.js"></script>
+</body>
+</html>
