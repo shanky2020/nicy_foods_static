@@ -1036,6 +1036,10 @@ footer {
     font-size: 1.1rem;
   }
 
+  .hero {
+    background-attachment: scroll;
+  }
+
   .hero-wrapper {
     flex-direction: column;
     gap: 30px;
@@ -1120,6 +1124,7 @@ footer {
 
   .hero {
     padding: 60px 0;
+    background-attachment: scroll;
   }
 
   .hero h1 {
