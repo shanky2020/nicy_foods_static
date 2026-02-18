@@ -161,7 +161,8 @@ function filterProducts(category) {
       // (Removed static filter button initialization)
       filterProducts(category);
     });
-  });
+  }
+});
 
   // Set first button as active by default
   if (filterButtons[0]) {
