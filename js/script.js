@@ -6,143 +6,6 @@
 // ===== PRODUCT DATA DATABASE =====
 let productsDatabase = [];
 
-/**
- * Fallback inline products data (for file:// protocol)
- */
-const FALLBACK_PRODUCTS = [
-  {
-    id: 1,
-    name: 'Peanut Laddu',
-    category: 'traditional',
-    description: 'Rich & nutty roasted peanut laddoos with pure ghee',
-    price: '₹299',
-    image: 'https://images.unsplash.com/photo-1599599810694-b5ac4dd33dfa?w=500&q=80',
-    fullDescription: 'Delicious and nutritious peanut laddoos made with roasted peanuts, pure ghee, and natural jaggery. Perfect for snacking and energy boost.',
-    ingredients: ['Roasted Peanuts', 'Pure Ghee', 'Natural Jaggery', 'Dry Fruits'],
-    benefits: ['High in Protein', 'Energy Boost', 'Aids Digestion', 'Rich in Antioxidants']
-  },
-  {
-    id: 2,
-    name: 'Khajur (Dates) Laddu',
-    category: 'traditional',
-    description: 'Sweet dates and ghee combination, naturally sugary',
-    price: '₹329',
-    image: 'https://images.unsplash.com/photo-1599599810972-a4c67b3097b1?w=500&q=80',
-    fullDescription: 'Premium dates laddoos made with finest quality dates, pure ghee, and a touch of cardamom. No added sugar needed due to natural sweetness of dates.',
-    ingredients: ['Premium Dates', 'Pure Ghee', 'Cardamom', 'Dry Fruits'],
-    benefits: ['Natural Energy', 'Iron Rich', 'Improves Digestion', 'Glowing Skin']
-  },
-  {
-    id: 3,
-    name: 'Tulsi Laddu',
-    category: 'herbal',
-    description: 'Herbal tulsi-infused laddoos for immunity boost',
-    price: '₹349',
-    image: 'https://images.unsplash.com/photo-1599599810923-f8d0bc1e88a4?w=500&q=80',
-    fullDescription: 'Specially crafted tulsi laddoos with immunity-boosting properties. Made with fresh tulsi leaves, pure ghee, and natural ingredients.',
-    ingredients: ['Fresh Tulsi', 'Pure Ghee', 'Natural Jaggery', 'Dry Fruits'],
-    benefits: ['Boosts Immunity', 'Relieves Cough', 'Detoxifies Body', 'Anti-inflammatory']
-  },
-  {
-    id: 4,
-    name: 'Beet Root Laddu',
-    category: 'herbal',
-    description: 'Colorful and nutritious beet laddoos, iron-rich',
-    price: '₹359',
-    image: 'https://images.unsplash.com/photo-1599599810736-a3e6c2839b94?w=500&q=80',
-    fullDescription: 'Naturally colored beetroot laddoos packed with iron and antioxidants. Perfect for blood health and overall wellness.',
-    ingredients: ['Fresh Beetroot', 'Pure Ghee', 'Natural Jaggery', 'Peanuts'],
-    benefits: ['Iron Rich', 'Improves Blood Flow', 'Detoxifies', 'Glowing Skin']
-  },
-  {
-    id: 5,
-    name: 'Ashwagandha Laddu',
-    category: 'herbal',
-    description: 'Stress relief and vitality boosting herbal laddoos',
-    price: '₹379',
-    image: 'https://images.unsplash.com/photo-1599599810893-a3e6c2839b94?w=500&q=80',
-    fullDescription: 'Powerful adaptogenic ashwagandha laddoos formulated to reduce stress, improve sleep, and enhance overall vitality.',
-    ingredients: ['Ashwagandha Powder', 'Pure Ghee', 'Natural Jaggery', 'Dry Fruits'],
-    benefits: ['Reduces Stress', 'Improves Sleep', 'Boosts Immunity', 'Enhances Energy']
-  },
-  {
-    id: 6,
-    name: 'Shatawari Laddu',
-    category: 'herbal',
-    description: 'Women\'s wellness herbal laddoos, traditionally revered',
-    price: '₹369',
-    image: 'https://images.unsplash.com/photo-1599599811854-a3e6c2839b94?w=500&q=80',
-    fullDescription: 'Traditional Ayurvedic Shatavari laddoos specially formulated for women\'s health, hormonal balance, and overall wellness.',
-    ingredients: ['Shatavari Root', 'Pure Ghee', 'Natural Jaggery', 'Dates'],
-    benefits: ['Women\'s Health', 'Hormonal Balance', 'Nourishing', 'Reproductive Health']
-  },
-  {
-    id: 7,
-    name: 'Moringa Laddu',
-    category: 'herbal',
-    description: 'Nutrient-packed moringa (drumstick) leaf laddoos',
-    price: '₹349',
-    image: 'https://images.unsplash.com/photo-1599599813456-a3e6c2839b94?w=500&q=80',
-    fullDescription: 'Supercharged moringa laddoos loaded with 92 nutrients. Perfect for daily nutrition and overall wellness.',
-    ingredients: ['Moringa Leaf Powder', 'Pure Ghee', 'Natural Jaggery', 'Almonds'],
-    benefits: ['Nutrient Dense', 'Energy Booster', 'Improves Digestion', 'Boosts Immunity']
-  },
-  {
-    id: 8,
-    name: 'Millet Laddu',
-    category: 'millet',
-    description: 'Ancient grain millet laddoos, gluten-free nutrition',
-    price: '₹319',
-    image: 'https://images.unsplash.com/photo-1599599812891-a3e6c2839b94?w=500&q=80',
-    fullDescription: 'Wholesome millet-based laddoos made from ancient grains. Naturally gluten-free and packed with essential minerals and fiber.',
-    ingredients: ['Roasted Millet', 'Pure Ghee', 'Natural Jaggery', 'Sesame Seeds'],
-    benefits: ['Gluten-Free', 'High in Fiber', 'Aids Digestion', 'Sustainable Grain']
-  },
-  {
-    id: 9,
-    name: 'Baby Cereal Laddu',
-    category: 'baby-friendly',
-    description: 'Gentle nutrition for little ones, from 8 months',
-    price: '₹289',
-    image: 'https://images.unsplash.com/photo-1599599810234-a3e6c2839b94?w=500&q=80',
-    fullDescription: 'Carefully crafted laddoos suitable for babies from 8 months. Made with mild cereals, pure ghee, and no allergenic ingredients.',
-    ingredients: ['Rice Cereal', 'Moong Dal', 'Pure Ghee', 'Natural Jaggery'],
-    benefits: ['Baby Safe', 'Easy to Digest', 'Nutritious', 'No Allergens']
-  },
-  {
-    id: 10,
-    name: 'Ragi Laddu',
-    category: 'millet',
-    description: 'Finger millet laddoos, calcium and iron enriched',
-    price: '₹329',
-    image: 'https://images.unsplash.com/photo-1599599808123-a3e6c2839b94?w=500&q=80',
-    fullDescription: 'Calcium-rich ragi (finger millet) laddoos perfect for bone health and iron content. Ideal for all age groups.',
-    ingredients: ['Roasted Ragi', 'Pure Ghee', 'Natural Jaggery', 'Dry Fruits'],
-    benefits: ['Calcium Rich', 'Iron Rich', 'Bone Health', 'Energy Dense']
-  },
-  {
-    id: 11,
-    name: 'Sesame Til Laddu',
-    category: 'traditional',
-    description: 'Til-rich laddoos for warmth and wellness',
-    price: '₹299',
-    image: 'https://images.unsplash.com/photo-1599599805234-a3e6c2839b94?w=500&q=80',
-    fullDescription: 'Traditional sesame laddoos loaded with calcium and healthy fats. Perfect for winter wellness.',
-    ingredients: ['Roasted Sesame Seeds', 'Pure Ghee', 'Natural Jaggery', 'Almonds'],
-    benefits: ['Calcium Rich', 'Healthy Fats', 'Bone Health', 'Warming Properties']
-  },
-  {
-    id: 12,
-    name: 'Coconut Laddu',
-    category: 'traditional',
-    description: 'Tropical coconut laddoos with subtle sweetness',
-    price: '₹319',
-    image: 'https://images.unsplash.com/photo-1599599812534-a3e6c2839b94?w=500&q=80',
-    fullDescription: 'Delightful coconut laddoos made with fresh coconut, pure ghee, and natural jaggery. Aromatic and delicious.',
-    ingredients: ['Fresh Coconut', 'Pure Ghee', 'Natural Jaggery', 'Cashews'],
-    benefits: ['Cooking Coconut', 'Healthy Fats', 'Good for Skin', 'Energy Booster']
-  }
-];
 
 /**
  * Fetch products from JSON file with fallback
@@ -159,10 +22,8 @@ async function loadProductsFromJSON() {
     console.log('Products loaded successfully from JSON file:', productsDatabase.length, 'products');
     return productsDatabase;
   } catch (error) {
-    console.warn('Could not load JSON file, using fallback data:', error.message);
-    // Use fallback data (for file:// protocol or when JSON file is not accessible)
-    productsDatabase = FALLBACK_PRODUCTS;
-    console.log('Using fallback products data:', productsDatabase.length, 'products');
+    console.warn('Could not load JSON file, no products will be shown:', error.message);
+    productsDatabase = [];
     return productsDatabase;
   }
 }
@@ -171,7 +32,8 @@ async function loadProductsFromJSON() {
 const hamburger = document.querySelector('.hamburger');
 const navMenu = document.querySelector('.nav-menu');
 const navLinks = document.querySelectorAll('.nav-link');
-const filterButtons = document.querySelectorAll('.filter-btn');
+const filterSection = document.getElementById('filter-section');
+let filterButtons = [];
 const productsGrid = document.querySelector('.products-grid');
 const featuredGrid = document.querySelector('.featured-grid');
 const contactForm = document.getElementById('contactForm');
@@ -226,7 +88,58 @@ document.addEventListener('DOMContentLoaded', () => {
   setActiveNavLink();
 });
 
-// ===== PRODUCT FILTERING =====
+
+// ===== DYNAMIC CATEGORY FILTER BUTTONS =====
+/**
+ * Get unique categories from products database
+ * @returns {Array} Array of unique category keys
+ */
+function getUniqueCategories(products) {
+  const categories = products.map(p => p.category);
+  return Array.from(new Set(categories));
+}
+
+/**
+ * Create filter buttons dynamically
+ */
+function renderFilterButtons() {
+  if (!filterSection) return;
+  // Always show 'All Products' first
+  let html = '<button class="filter-btn" data-filter="all">All Products</button>';
+  const categories = getUniqueCategories(productsDatabase);
+  categories.forEach(cat => {
+    html += `<button class="filter-btn" data-filter="${cat}">${formatCategory(cat)}</button>`;
+  });
+  filterSection.innerHTML = html;
+  filterButtons = filterSection.querySelectorAll('.filter-btn');
+  // Set 'All Products' as active by default
+  if (filterButtons.length > 0) {
+    filterButtons[0].classList.add('active');
+  }
+  // Re-initialize filter button events
+  initFilterButtons();
+}
+
+/**
+ * Initialize filter button click events
+ */
+function initFilterButtons() {
+  if (!filterButtons.length) return;
+  filterButtons.forEach(button => {
+    button.addEventListener('click', (e) => {
+      e.preventDefault();
+      filterButtons.forEach(btn => btn.classList.remove('active'));
+      button.classList.add('active');
+      const category = button.dataset.filter;
+      filterProducts(category);
+    });
+  });
+  // Set first button as active by default
+  if (filterButtons[0]) {
+    filterButtons[0].classList.add('active');
+    filterProducts('all');
+  }
+}
 
 /**
  * Render products based on category filter
@@ -245,29 +158,7 @@ function filterProducts(category) {
       // Trigger animation
       setTimeout(() => {
         card.style.animation = 'fadeInUp 0.6s ease-out';
-      }, 10);
-    } else {
-      card.classList.add('hidden');
-    }
-  });
-}
-
-/**
- * Initialize filter buttons
- */
-if (filterButtons.length > 0) {
-  filterButtons.forEach(button => {
-    button.addEventListener('click', (e) => {
-      e.preventDefault();
-      
-      // Remove active class from all buttons
-      filterButtons.forEach(btn => btn.classList.remove('active'));
-      
-      // Add active class to clicked button
-      button.classList.add('active');
-      
-      // Filter products
-      const category = button.dataset.filter;
+      // (Removed static filter button initialization)
       filterProducts(category);
     });
   });
@@ -345,6 +236,9 @@ function initializeProductRendering() {
   if (productsGrid) {
     renderProducts(productsDatabase, productsGrid);
   }
+
+  // Render dynamic filter buttons (after productsDatabase is loaded)
+  renderFilterButtons();
 }
 
 // ===== PRODUCT DETAIL PAGE =====
