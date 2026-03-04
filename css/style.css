@@ -469,6 +469,17 @@ section.white-bg {
   height: 100%;
 }
 
+.product-card-link {
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+}
+
+.product-card-link:focus-visible {
+  outline: 3px solid rgba(230, 126, 34, 0.45);
+  outline-offset: 3px;
+}
+
 .product-card:hover {
   transform: translateY(-8px);
   box-shadow: var(--shadow-hover);

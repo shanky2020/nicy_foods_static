@@ -83,12 +83,6 @@ function setActiveNavLink() {
   });
 }
 
-// Call on page load
-document.addEventListener('DOMContentLoaded', () => {
-  setActiveNavLink();
-});
-
-
 // ===== DYNAMIC CATEGORY FILTER BUTTONS =====
 /**
  * Get unique categories from products database
@@ -217,9 +211,10 @@ function getPrimaryProductImage(product) {
  */
 function createProductCard(product) {
   const primaryImage = getPrimaryProductImage(product);
+  const detailUrl = `product-detail.html?id=${product.id}`;
 
   return `
-    <div class="product-card" data-category="${product.category}" data-product-id="${product.id}">
+    <a href="${detailUrl}" class="product-card product-card-link" data-category="${product.category}" data-product-id="${product.id}" data-detail-url="${detailUrl}" aria-label="View details for ${product.name}">
       <div class="product-image">
         <img src="${primaryImage}" alt="${product.name}" loading="lazy">
       </div>
@@ -228,11 +223,11 @@ function createProductCard(product) {
         <h3 class="product-name">${product.name}</h3>
         <p class="product-desc">${product.description}</p>
         <p class="product-price">${product.price}</p>
-        <a href="product-detail.html?id=${product.id}" class="btn btn-primary btn-small" style="width: 100%; justify-content: center;">
+        <span class="btn btn-primary btn-small" style="width: 100%; justify-content: center;">
           View Details
-        </a>
+        </span>
       </div>
-    </div>
+    </a>
   `;
 }
 
@@ -331,9 +326,11 @@ async function loadProductDetail() {
   const questionsInfo = document.querySelector('.questions-info');
   const detailImageContainer = document.querySelector('.product-detail-image');
   const productImages = getProductImages(product);
+  const ingredients = Array.isArray(product.ingredients) ? product.ingredients : [];
+  const benefits = Array.isArray(product.benefits) ? product.benefits : [];
   const keyFeatures = Array.isArray(product.keyFeatures) && product.keyFeatures.length > 0
     ? product.keyFeatures
-    : (Array.isArray(product.benefits) ? product.benefits.slice(0, 4) : []);
+    : benefits.slice(0, 4);
   const keyFeaturesSection = keyFeaturesList ? keyFeaturesList.closest('.detail-section') : null;
   const additionalInfoSection = document.querySelector('.product-additional-info');
   const productContactEmail = product.contactEmail || 'nicyfoods5@gmail.com';
@@ -387,15 +384,27 @@ async function loadProductDetail() {
   }
 
   if (ingredientsList) {
-    ingredientsList.innerHTML = product.ingredients
-      .map(ingredient => `<li>${ingredient}</li>`)
-      .join('');
+    if (ingredients.length > 0) {
+      ingredientsList.innerHTML = ingredients
+        .map(ingredient => `<li>${ingredient}</li>`)
+        .join('');
+      ingredientsList.closest('.detail-section').style.display = '';
+    } else {
+      ingredientsList.innerHTML = '';
+      ingredientsList.closest('.detail-section').style.display = 'none';
+    }
   }
 
   if (benefitsList) {
-    benefitsList.innerHTML = product.benefits
-      .map(benefit => `<li>${benefit}</li>`)
-      .join('');
+    if (benefits.length > 0) {
+      benefitsList.innerHTML = benefits
+        .map(benefit => `<li>${benefit}</li>`)
+        .join('');
+      benefitsList.closest('.detail-section').style.display = '';
+    } else {
+      benefitsList.innerHTML = '';
+      benefitsList.closest('.detail-section').style.display = 'none';
+    }
   }
 
   if (orderButton) {
@@ -433,13 +442,6 @@ async function loadProductDetail() {
 
   // Update page title
   document.title = `${product.name} - NicyFoods`;
-}
-
-// Load product details on page load
-if (document.querySelector('.product-detail-container')) {
-  document.addEventListener('DOMContentLoaded', async () => {
-    await loadProductDetail();
-  });
 }
 
 // ===== CONTACT FORM FUNCTIONALITY =====
@@ -519,8 +521,6 @@ function initScrollAnimations() {
   });
 }
 
-document.addEventListener('DOMContentLoaded', initScrollAnimations);
-
 // ===== SMOOTH SCROLL FOR ANCHOR LINKS =====
 
 /**
@@ -591,6 +591,11 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   // Initialize product rendering
   initializeProductRendering();
+
+  // Load product details on product detail page
+  if (document.querySelector('.product-detail-container')) {
+    await loadProductDetail();
+  }
 
   // Initialize scroll animations
   initScrollAnimations();
