@@ -320,12 +320,23 @@ async function loadProductDetail() {
   const detailName = document.querySelector('.product-detail-info h1');
   const detailCategory = document.querySelector('.detail-category');
   const detailDescription = document.querySelector('.detail-description');
+  const keyFeaturesList = document.querySelector('.key-features-list');
   const ingredientsList = document.querySelector('.ingredients-list');
   const benefitsList = document.querySelector('.benefits-list');
   const detailPrice = document.querySelector('.detail-price');
   const orderButton = document.querySelector('.order-now-btn');
+  const questionEmail = document.querySelector('.detail-question-email');
+  const packagingInfo = document.querySelector('.packaging-info');
+  const deliveryInfo = document.querySelector('.delivery-info');
+  const questionsInfo = document.querySelector('.questions-info');
   const detailImageContainer = document.querySelector('.product-detail-image');
   const productImages = getProductImages(product);
+  const keyFeatures = Array.isArray(product.keyFeatures) && product.keyFeatures.length > 0
+    ? product.keyFeatures
+    : (Array.isArray(product.benefits) ? product.benefits.slice(0, 4) : []);
+  const keyFeaturesSection = keyFeaturesList ? keyFeaturesList.closest('.detail-section') : null;
+  const additionalInfoSection = document.querySelector('.product-additional-info');
+  const productContactEmail = product.contactEmail || 'nicyfoods5@gmail.com';
 
   if (detailImage && productImages.length > 0) {
     detailImage.src = productImages[0];
@@ -335,6 +346,17 @@ async function loadProductDetail() {
   if (detailCategory) detailCategory.textContent = formatCategory(product.category);
   if (detailDescription) detailDescription.textContent = product.fullDescription;
   if (detailPrice) detailPrice.textContent = product.price;
+
+  if (keyFeaturesList) {
+    if (keyFeatures.length > 0) {
+      keyFeaturesList.innerHTML = keyFeatures
+        .map(feature => `<li>${feature}</li>`)
+        .join('');
+      if (keyFeaturesSection) keyFeaturesSection.style.display = '';
+    } else if (keyFeaturesSection) {
+      keyFeaturesSection.style.display = 'none';
+    }
+  }
 
   if (detailImageContainer && productImages.length > 1) {
     let thumbnails = detailImageContainer.querySelector('.product-thumbnails');
@@ -377,8 +399,36 @@ async function loadProductDetail() {
   }
 
   if (orderButton) {
-    const mailtoLink = `mailto:nkcyfoods5@gmail.com?subject=Order%20Inquiry%20-%20${encodeURIComponent(product.name)}&body=Hi%20NicyFoods,%0A%0AI%20am%20interested%20in%20ordering%20${encodeURIComponent(product.name)}.%0A%0APlease%20provide%20more%20details%20and%20pricing.%0A%0AThank%20you!`;
+    const mailtoLink = `mailto:${productContactEmail}?subject=Order%20Inquiry%20-%20${encodeURIComponent(product.name)}&body=Hi%20NicyFoods,%0A%0AI%20am%20interested%20in%20ordering%20${encodeURIComponent(product.name)}.%0A%0APlease%20provide%20more%20details%20and%20pricing.%0A%0AThank%20you!`;
     orderButton.href = mailtoLink;
+  }
+
+  if (questionEmail) {
+    questionEmail.href = `mailto:${productContactEmail}`;
+    questionEmail.textContent = productContactEmail;
+  }
+
+  if (additionalInfoSection) {
+    const hasAdditionalInfo = product.packagingInfo || product.deliveryInfo || product.questionsInfo;
+    if (!hasAdditionalInfo) {
+      additionalInfoSection.style.display = 'none';
+    } else {
+      additionalInfoSection.style.display = '';
+      if (packagingInfo && product.packagingInfo) {
+        packagingInfo.innerHTML = `<strong>📦 Packaging:</strong> ${product.packagingInfo}`;
+      }
+      if (deliveryInfo && product.deliveryInfo) {
+        deliveryInfo.innerHTML = `<strong>🚚 Delivery:</strong> ${product.deliveryInfo}`;
+      }
+      if (questionsInfo && product.questionsInfo) {
+        questionsInfo.innerHTML = `<strong>❓ Questions?</strong> ${product.questionsInfo}`;
+      }
+    }
+  }
+
+  const breadcrumbCurrent = document.querySelector('section nav span:last-child');
+  if (breadcrumbCurrent) {
+    breadcrumbCurrent.textContent = product.name;
   }
 
   // Update page title

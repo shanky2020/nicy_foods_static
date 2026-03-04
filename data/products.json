@@ -10,8 +10,7 @@
       "image": "1.jpeg",
       "images": [
         "1.jpeg",
-        "2.jpeg",
-        "3.jpeg"
+        "2.jpeg"
       ],
       "fullDescription": "Nachni (ragi) laddu made with nachni, ghee, cashew, almond, and cardamom. An ancient superfood choice with strong nutritional value.",
       "ingredients": [
@@ -64,10 +63,10 @@
       "description": "Traditional Dink (Gond) laddu with dry fruits, jaggery, and ghee",
       "price": "₹369",
       "imageFolder": "images/products/dink_ladoo",
-      "image": "1.jpeg",
+      "image": "1.jpg",
       "images": [
-        "1.jpeg",
-        "2.jpeg",
+        "1.jpg",
+        "2.jpg",
         "3.jpg"
       ],
       "fullDescription": "Dink (Gond) laddu made with dink, kharik, coconut, kaju, almond, jaggery, ghee, cardamom, and nutmeg. A nutrient-dense traditional sweet often preferred for bone strength, immunity, and post-pregnancy nourishment.",
@@ -225,11 +224,11 @@
       "description": "Khajur laddu with peanut and gulkand for natural sweetness",
       "price": "₹329",
       "imageFolder": "images/products/khajoor_ladoo",
-      "image": "1.jpeg",
+      "image": "1.jpg",
       "images": [
-        "1.jpeg",
-        "2.jpeg",
-        "3.jpeg"
+        "1.jpg",
+        "2.jpg",
+        "3.jpg"
       ],
       "fullDescription": "Khajur (dates) laddu made using khajur, peanut, and gulkand. Naturally sweet and known for digestive and wellness support.",
       "ingredients": [
@@ -252,11 +251,11 @@
       "description": "Rich besan ghee laddu with dry fruits and cardamom",
       "price": "₹349",
       "imageFolder": "images/products/besan_ladoo",
-      "image": "1.jpeg",
+      "image": "1.jpg",
       "images": [
-        "1.jpeg",
-        "2.jpeg",
-        "3.jpeg"
+        "1.jpg",
+        "2.jpg",
+        "3.jpg"
       ],
       "fullDescription": "Besan (Ghee) laddu made with gram flour, ghee, sugar, rava, kaju, badam, and cardamom. A classic festive sweet with rich taste and wholesome ingredients.",
       "ingredients": [
@@ -382,7 +381,7 @@
       "category": "traditional",
       "description": "Nutritious beetroot laddu with peanut and jaggery",
       "price": "₹279",
-      "imageFolder": "images/products/beetroot-laddu",
+      "imageFolder": "images/products/beet_ladoo",
       "image": "1.jpg",
       "images": [
         "1.jpg",
@@ -435,11 +434,11 @@
       "description": "Chocolate laddu with cocoa, peanut, and jaggery",
       "price": "₹299",
       "imageFolder": "images/products/chocolate_ladoo",
-      "image": "1.jpeg",
+      "image": "1.jpg",
       "images": [
-        "1.jpeg",
-        "2.jpeg",
-        "3.jpeg"
+        "1.jpg",
+        "2.jpg",
+        "3.jpg"
       ],
       "fullDescription": "Chocolate laddu made with cocoa powder, peanut, and jaggery. A flavorful fusion sweet with antioxidant-rich ingredients and natural energy support.",
       "ingredients": [
@@ -461,11 +460,11 @@
       "description": "Premium dryfruit laddu packed with nuts, seeds, and natural sweetness",
       "price": "₹449",
       "imageFolder": "images/products/dryfruit_ladoo",
-      "image": "1.jpeg",
+      "image": "1.jpg",
       "images": [
-        "1.jpeg",
-        "2.jpeg",
-        "3.jpeg"
+        "1.jpg",
+        "2.jpg",
+        "3.jpg"
       ],
       "fullDescription": "Dryfruit laddu made with kaju, almond, dink, dates, coconut, kharik, ghee, and jaggery. A nutrient-dense traditional sweet that supports immunity, bone strength, and brain health.",
       "ingredients": [
