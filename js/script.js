@@ -158,20 +158,57 @@ function filterProducts(category) {
       // Trigger animation
       setTimeout(() => {
         card.style.animation = 'fadeInUp 0.6s ease-out';
-      // (Removed static filter button initialization)
-      filterProducts(category);
-    });
-  }
-});
-
-  // Set first button as active by default
-  if (filterButtons[0]) {
-    filterButtons[0].classList.add('active');
-    filterProducts('all');
-  }
+      }, 50);
+    } else {
+      card.classList.add('hidden');
+    }
+  });
 }
 
 // ===== RENDER PRODUCTS =====
+
+/**
+ * Get all images for a product with backward compatibility
+ * @param {object} product - Product object
+ * @returns {array} Array of image URLs
+ */
+function getProductImages(product) {
+  const imageFolder = (product.imageFolder || '').replace(/\/+$/, '');
+
+  const resolveImagePath = (imagePath) => {
+    if (!imagePath) return '';
+
+    // Keep full URLs/data URIs/absolute paths unchanged.
+    const isAbsolutePath = /^(https?:)?\/\//i.test(imagePath) || imagePath.startsWith('data:') || imagePath.startsWith('/');
+    if (isAbsolutePath) return imagePath;
+
+    // If product has a dedicated folder and image is a filename, prefix it.
+    if (imageFolder && !imagePath.includes('/')) {
+      return `${imageFolder}/${imagePath}`;
+    }
+
+    // Otherwise treat it as a project-relative path.
+    return imagePath;
+  };
+
+  if (Array.isArray(product.images) && product.images.length > 0) {
+    return product.images.map(resolveImagePath).filter(Boolean);
+  }
+  if (product.image) {
+    return [resolveImagePath(product.image)];
+  }
+  return [];
+}
+
+/**
+ * Get primary product image
+ * @param {object} product - Product object
+ * @returns {string} Image URL or empty string
+ */
+function getPrimaryProductImage(product) {
+  const images = getProductImages(product);
+  return images[0] || '';
+}
 
 /**
  * Create product card HTML
@@ -179,10 +216,12 @@ function filterProducts(category) {
  * @returns {string} - HTML string for product card
  */
 function createProductCard(product) {
+  const primaryImage = getPrimaryProductImage(product);
+
   return `
     <div class="product-card" data-category="${product.category}" data-product-id="${product.id}">
       <div class="product-image">
-        <img src="${product.image}" alt="${product.name}" loading="lazy">
+        <img src="${primaryImage}" alt="${product.name}" loading="lazy">
       </div>
       <div class="product-info">
         <span class="product-category">${formatCategory(product.category)}</span>
@@ -256,7 +295,7 @@ function getProductIdFromURL() {
 /**
  * Load and display product details
  */
-function loadProductDetail() {
+async function loadProductDetail() {
   const productId = getProductIdFromURL();
   
   if (!productId) {
@@ -264,10 +303,15 @@ function loadProductDetail() {
     return;
   }
 
+  // Ensure products are loaded before looking up the detail page id.
+  if (!productsDatabase.length) {
+    await loadProductsFromJSON();
+  }
+
   const product = productsDatabase.find(p => p.id == productId);
   
   if (!product) {
-    console.error('Product not found');
+    console.error(`Product not found for id=${productId}`);
     return;
   }
 
@@ -280,12 +324,45 @@ function loadProductDetail() {
   const benefitsList = document.querySelector('.benefits-list');
   const detailPrice = document.querySelector('.detail-price');
   const orderButton = document.querySelector('.order-now-btn');
+  const detailImageContainer = document.querySelector('.product-detail-image');
+  const productImages = getProductImages(product);
 
-  if (detailImage) detailImage.src = product.image;
+  if (detailImage && productImages.length > 0) {
+    detailImage.src = productImages[0];
+    detailImage.alt = product.name;
+  }
   if (detailName) detailName.textContent = product.name;
   if (detailCategory) detailCategory.textContent = formatCategory(product.category);
   if (detailDescription) detailDescription.textContent = product.fullDescription;
   if (detailPrice) detailPrice.textContent = product.price;
+
+  if (detailImageContainer && productImages.length > 1) {
+    let thumbnails = detailImageContainer.querySelector('.product-thumbnails');
+    if (!thumbnails) {
+      thumbnails = document.createElement('div');
+      thumbnails.className = 'product-thumbnails';
+      detailImageContainer.appendChild(thumbnails);
+    }
+
+    thumbnails.innerHTML = productImages
+      .map((image, index) => `
+        <button class="thumbnail-btn ${index === 0 ? 'active' : ''}" type="button" data-image="${image}" aria-label="View image ${index + 1} of ${product.name}">
+          <img src="${image}" alt="${product.name} image ${index + 1}" loading="lazy">
+        </button>
+      `)
+      .join('');
+
+    thumbnails.querySelectorAll('.thumbnail-btn').forEach(button => {
+      button.addEventListener('click', () => {
+        const selectedImage = button.dataset.image;
+        if (detailImage && selectedImage) {
+          detailImage.src = selectedImage;
+        }
+        thumbnails.querySelectorAll('.thumbnail-btn').forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+      });
+    });
+  }
 
   if (ingredientsList) {
     ingredientsList.innerHTML = product.ingredients
@@ -310,7 +387,9 @@ function loadProductDetail() {
 
 // Load product details on page load
 if (document.querySelector('.product-detail-container')) {
-  document.addEventListener('DOMContentLoaded', loadProductDetail);
+  document.addEventListener('DOMContentLoaded', async () => {
+    await loadProductDetail();
+  });
 }
 
 // ===== CONTACT FORM FUNCTIONALITY =====
@@ -544,6 +623,8 @@ if (typeof module !== 'undefined' && module.exports) {
     filterProducts,
     createProductCard,
     formatCategory,
+    getProductImages,
+    getPrimaryProductImage,
     getProductIdFromURL,
     loadProductDetail,
     initializeProductRendering

@@ -2,89 +2,716 @@
   "products": [
     {
       "id": 1,
-      "name": "Peanut Laddu",
-      "category": "traditional",
-      "description": "Rich & nutty roasted peanut laddoos with pure ghee",
-      "price": "₹299",
-      "image": "https://images.unsplash.com/photo-1599599810694-b5ac4dd33dfa?w=500&q=80",
-      "fullDescription": "Delicious and nutritious peanut laddoos made with roasted peanuts, pure ghee, and natural jaggery. Perfect for snacking and energy boost.",
+      "name": "Nachni(Ragi) Laddu",
+      "category": "millet",
+      "description": "Nachni (ragi) laddu, an ancient superfood rich in iron, calcium and fiber",
+      "price": "₹329",
+      "imageFolder": "images/products/nachni_ladoo",
+      "image": "1.jpeg",
+      "images": [
+        "1.jpeg",
+        "2.jpeg",
+        "3.jpeg"
+      ],
+      "fullDescription": "Nachni (ragi) laddu made with nachni, ghee, cashew, almond, and cardamom. An ancient superfood choice with strong nutritional value.",
       "ingredients": [
-        "Roasted Peanuts",
-        "Pure Ghee",
-        "Natural Jaggery",
-        "Dry Fruits"
+        "Nachni (Ragi)",
+        "Ghee",
+        "Cashew",
+        "Almond",
+        "Cardamom"
       ],
       "benefits": [
-        "High in Protein",
-        "Energy Boost",
-        "Aids Digestion",
-        "Rich in Antioxidants"
+        "Good Source of Iron, Calcium and Fiber",
+        "Helps in Weight Management",
+        "Supports Bone Health",
+        "Ancient Superfood Nutrition"
       ]
     },
     {
       "id": 2,
-      "name": "Khajur (Dates) Laddu",
+      "name": "Aaliv Laddu",
       "category": "traditional",
-      "description": "Sweet dates and ghee combination, naturally sugary",
-      "price": "₹329",
-      "image": "https://images.unsplash.com/photo-1599599810972-a4c67b3097b1?w=500&q=80",
-      "fullDescription": "Premium dates laddoos made with finest quality dates, pure ghee, and a touch of cardamom. No added sugar needed due to natural sweetness of dates.",
+      "description": "Nutritious Aaliv laddu with haliv, coconut, jaggery, and warming spices",
+      "price": "₹349",
+      "imageFolder": "images/products/aaliv-laddu",
+      "image": "1.jpeg",
+      "images": [
+        "1.jpeg",
+        "2.jpeg",
+        "3.jpeg"
+      ],
+      "fullDescription": "Aaliv laddu made with haliv, ghee, coconut, jaggery, cardamom, and nutmeg. Traditionally valued for nutrition, immunity support, and postnatal wellness.",
       "ingredients": [
-        "Premium Dates",
-        "Pure Ghee",
+        "Haliv (Aaliv)",
+        "Ghee",
+        "Coconut",
+        "Jaggery",
         "Cardamom",
-        "Dry Fruits"
+        "Nutmeg"
       ],
       "benefits": [
-        "Natural Energy",
-        "Iron Rich",
-        "Improves Digestion",
-        "Glowing Skin"
+        "Helps Increase Iron Levels",
+        "Supports Breast Milk Production for Lactating Mothers",
+        "Rich in Vitamins and Antioxidants",
+        "Supports Immunity, RBC and Bone Health"
       ]
     },
-    
     {
       "id": 3,
-      "name": "Ragi Laddu",
-      "category": "millet",
-      "description": "Finger millet laddoos, calcium and iron enriched",
-      "price": "₹329",
-      "image": "https://images.unsplash.com/photo-1599599808123-a3e6c2839b94?w=500&q=80",
-      "fullDescription": "Calcium-rich ragi (finger millet) laddoos perfect for bone health and iron content. Ideal for all age groups.",
+      "name": "Dink Laddu (Gond Laddu)",
+      "category": "traditional",
+      "description": "Traditional Dink (Gond) laddu with dry fruits, jaggery, and ghee",
+      "price": "₹369",
+      "imageFolder": "images/products/dink_ladoo",
+      "image": "1.jpeg",
+      "images": [
+        "1.jpeg",
+        "2.jpeg",
+        "3.jpg"
+      ],
+      "fullDescription": "Dink (Gond) laddu made with dink, kharik, coconut, kaju, almond, jaggery, ghee, cardamom, and nutmeg. A nutrient-dense traditional sweet often preferred for bone strength, immunity, and post-pregnancy nourishment.",
       "ingredients": [
-        "Roasted Ragi",
-        "Pure Ghee",
-        "Natural Jaggery",
+        "Dink (Gond)",
+        "Kharik",
+        "Coconut",
+        "Kaju (Cashew)",
+        "Almond",
+        "Jaggery",
+        "Ghee",
+        "Cardamom",
+        "Nutmeg"
+      ],
+      "benefits": [
+        "Good Source of Calcium",
+        "Helps Make Bones Stronger",
+        "Boosts Immunity and Supports Pain Management",
+        "Helpful Post Pregnancy and for Lactating Mothers"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Mug Laddu",
+      "category": "traditional",
+      "description": "Wholesome mug laddu with ghee, jaggery, and dry fruits",
+      "price": "₹339",
+      "imageFolder": "images/products/mug-laddu",
+      "image": "1.jpg",
+      "images": [
+        "1.jpg",
+        "2.jpg",
+        "3.jpg"
+      ],
+      "fullDescription": "Mug laddu prepared using mug, ghee, jaggery, kaju, almond, and cardamom. A traditional nutritious sweet known for antioxidant support, immunity, and balanced wellness.",
+      "ingredients": [
+        "Mug",
+        "Ghee",
+        "Jaggery",
+        "Kaju (Cashew)",
+        "Almond",
+        "Cardamom"
+      ],
+      "benefits": [
+        "High in Antioxidants",
+        "May Help Support Healthy Blood Pressure",
+        "Boosts Immunity and Helps Protect Against Infections",
+        "Suitable for Weight Management and High Uric Acid Diets"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Paustik Laddu",
+      "category": "traditional",
+      "description": "Nutrient-rich paustik laddu with wheat flour, dry fruits, dink, and jaggery",
+      "price": "₹379",
+      "imageFolder": "images/products/paustik-laddu",
+      "image": "1.jpg",
+      "images": [
+        "1.jpg",
+        "2.jpg",
+        "3.jpg"
+      ],
+      "fullDescription": "Paustik laddu made with wheat flour, kaju, almond, dink, kharik, coconut, ghee, jaggery, and cardamom. A wholesome traditional sweet packed with essential nutrients for daily nourishment and energy.",
+      "ingredients": [
+        "Wheat Flour",
+        "Kaju (Cashew)",
+        "Almond",
+        "Dink (Gond)",
+        "Kharik",
+        "Coconut",
+        "Ghee",
+        "Jaggery",
+        "Cardamom"
+      ],
+      "benefits": [
+        "Rich in Vitamins and Essential Nutrients",
+        "Healthy Sweet for Energy Boost",
+        "Contains Calcium, Iron, Protein and Micronutrients",
+        "Supports Digestive Health"
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Methi Laddu",
+      "category": "traditional",
+      "description": "Traditional methi laddu with dry fruits, dink, ghee, and jaggery",
+      "price": "₹359",
+      "imageFolder": "images/products/methi-laddu",
+      "image": "1.jpg",
+      "images": [
+        "1.jpg",
+        "2.jpg",
+        "3.jpg"
+      ],
+      "fullDescription": "Methi laddu made with methi, kaju, kharik, wheat flour, almond, coconut, dink, cardamom, ghee, and jaggery. A nourishing traditional recipe known for post-pregnancy support and daily wellness.",
+      "ingredients": [
+        "Methi",
+        "Kaju (Cashew)",
+        "Kharik",
+        "Wheat Flour",
+        "Almond",
+        "Coconut",
+        "Dink (Gond)",
+        "Cardamom",
+        "Ghee",
+        "Jaggery"
+      ],
+      "benefits": [
+        "Helps Control Blood Sugar",
+        "Supports Better Digestion",
+        "Helps Make Bones Stronger",
+        "Helpful in Post Pregnancy Nutrition"
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Sugar Free Methi Laddu",
+      "category": "traditional",
+      "description": "Sugar-free methi laddu with dates, raisins, seeds, dry fruits, and ghee",
+      "price": "₹389",
+      "imageFolder": "images/products/sugar-free-methi-laddu",
+      "image": "1.jpg",
+      "images": [
+        "1.jpg",
+        "2.jpg",
+        "3.jpg"
+      ],
+      "fullDescription": "Sugar Free Methi laddu made with methi, kharik, coconut, wheat flour, dink, raisins, dates, kaju, almond, poppy seeds, ghee, and cardamom. A naturally sweetened traditional option for balanced nutrition.",
+      "ingredients": [
+        "Methi",
+        "Kharik",
+        "Coconut",
+        "Wheat Flour",
+        "Dink (Gond)",
+        "Raisins",
+        "Dates",
+        "Kaju (Cashew)",
+        "Almond",
+        "Poppy Seeds",
+        "Ghee",
+        "Cardamom"
+      ],
+      "benefits": [
+        "Helps Control Blood Sugar",
+        "Supports Better Digestion",
+        "Helps Make Bones Stronger",
+        "Helpful in Post Pregnancy Nutrition"
+      ]
+    },
+   {
+      "id": 8,
+      "name": "Khajur (Dates) Laddu",
+      "category": "traditional",
+      "description": "Khajur laddu with peanut and gulkand for natural sweetness",
+      "price": "₹329",
+      "imageFolder": "images/products/khajoor_ladoo",
+      "image": "1.jpeg",
+      "images": [
+        "1.jpeg",
+        "2.jpeg",
+        "3.jpeg"
+      ],
+      "fullDescription": "Khajur (dates) laddu made using khajur, peanut, and gulkand. Naturally sweet and known for digestive and wellness support.",
+      "ingredients": [
+        "Khajur (Dates)",
+        "Peanut",
+        "Gulkand",
+        "Sugar"
+      ],
+      "benefits": [
+        "Helps Digestion",
+        "Anti-Ageing Support",
+        "Rich in Vitamins A, C, E and K",
+        "Helps in Weight Management"
+      ]
+    },
+    {
+      "id": 9,
+      "name": "Besan (Ghee) Laddu",
+      "category": "traditional",
+      "description": "Rich besan ghee laddu with dry fruits and cardamom",
+      "price": "₹349",
+      "imageFolder": "images/products/besan_ladoo",
+      "image": "1.jpeg",
+      "images": [
+        "1.jpeg",
+        "2.jpeg",
+        "3.jpeg"
+      ],
+      "fullDescription": "Besan (Ghee) laddu made with gram flour, ghee, sugar, rava, kaju, badam, and cardamom. A classic festive sweet with rich taste and wholesome ingredients.",
+      "ingredients": [
+        "Gram Flour (Besan)",
+        "Ghee",
+        "Sugar",
+        "Rava",
+        "Kaju (Cashew)",
+        "Badam (Almond)",
+        "Cardamom"
+      ],
+      "benefits": [
+        "Rich and Healthy Traditional Sweet",
+        "Rich in Protein, Fiber and Minerals",
+        "Helps Boost Immunity",
+        "Good Source of Fiber and Antioxidants"
+      ]
+    },
+    {
+      "id": 10,
+      "name": "Murmura Laddu",
+      "category": "traditional",
+      "description": "Light and crunchy murmura laddu sweetened with jaggery",
+      "price": "₹229",
+      "imageFolder": "images/products/murmura-laddu",
+      "image": "1.jpg",
+      "images": [
+        "1.jpg",
+        "2.jpg",
+        "3.jpg"
+      ],
+      "fullDescription": "Murmura laddu made with puffed rice (murmura) and jaggery. A light traditional sweet known for quick energy and everyday snacking.",
+      "ingredients": [
+        "Murmura (Puffed Rice)",
+        "Jaggery"
+      ],
+      "benefits": [
+        "Energy Booster",
+        "Helps Digestion and Supports Bone Strength",
+        "Helps in Weight Management",
+        "Source of Iron and Vitamin B"
+      ]
+    },
+    {
+      "id": 11,
+      "name": "Rajgira Laddu",
+      "category": "millet",
+      "description": "Nutritious rajgira laddu with natural jaggery sweetness",
+      "price": "₹249",
+      "imageFolder": "images/products/rajgira-laddu",
+      "image": "1.jpg",
+      "images": [
+        "1.jpg",
+        "2.jpg",
+        "3.jpg"
+      ],
+      "fullDescription": "Rajgira laddu made with rajgira and jaggery. A simple, nourishing traditional sweet valued for protein, fiber, minerals, and heart-friendly nutrition.",
+      "ingredients": [
+        "Rajgira (Amaranth)",
+        "Jaggery"
+      ],
+      "benefits": [
+        "Good Source of Protein, Fiber and Minerals",
+        "Helps Make Bones Strong and Supports Immunity",
+        "Helps in Weight Loss Management",
+        "Good for Heart Health"
+      ]
+    },
+    {
+      "id": 12,
+      "name": "Peanut Laddu",
+      "category": "traditional",
+      "description": "Energy booster peanut laddu made with jaggery and no added sugar",
+      "price": "₹299",
+      "imageFolder": "images/products/peanut-laddu",
+      "image": "1.jpg",
+      "images": [
+        "1.jpg",
+        "2.jpg",
+        "3.jpg"
+      ],
+      "fullDescription": "Traditional peanut laddu prepared with peanut and jaggery. A simple, nutritious sweet that supports daily energy and overall wellness.",
+      "ingredients": [
+        "Peanut",
+        "Jaggery"
+      ],
+      "benefits": [
+        "Energy Booster",
+        "No Added Sugar",
+        "Helps Support Blood Pressure",
+        "Supports Overall Health"
+      ]
+    },
+    {
+      "id": 13,
+      "name": "Til (Sesame) Laddu",
+      "category": "traditional",
+      "description": "Calcium-rich til laddu with sesame, peanut, and jaggery",
+      "price": "₹259",
+      "imageFolder": "images/products/til-sesame-laddu",
+      "image": "1.jpg",
+      "images": [
+        "1.jpg",
+        "2.jpg",
+        "3.jpg"
+      ],
+      "fullDescription": "Til (sesame) laddu made with sesame seeds, peanut, and jaggery. A traditional winter favorite known for calcium, minerals, and gut-friendly fiber.",
+      "ingredients": [
+        "Til (Sesame)",
+        "Peanut",
+        "Jaggery"
+      ],
+      "benefits": [
+        "Good Source of Vitamins and Minerals (Vitamin B, Zinc, Magnesium)",
+        "Calcium Rich for Stronger Bones",
+        "Fiber Rich and Gut Friendly",
+        "Supports Daily Nutrition"
+      ]
+    },
+    {
+      "id": 14,
+      "name": "Beet (Beetroot) Laddu",
+      "category": "traditional",
+      "description": "Nutritious beetroot laddu with peanut and jaggery",
+      "price": "₹279",
+      "imageFolder": "images/products/beetroot-laddu",
+      "image": "1.jpg",
+      "images": [
+        "1.jpg",
+        "2.jpg",
+        "3.jpg"
+      ],
+      "fullDescription": "Beetroot laddu made with beetroot, peanut, and jaggery. A vibrant traditional sweet known for energy support and wellness-focused nutrition.",
+      "ingredients": [
+        "Beetroot",
+        "Peanut",
+        "Jaggery"
+      ],
+      "benefits": [
+        "Helps Regulate Blood Pressure",
+        "Improves Energy Levels",
+        "Helps in Anemia Support",
+        "May Help Reduce Bad Cholesterol"
+      ]
+    },
+    {
+      "id": 15,
+      "name": "Tulshi Laddu",
+      "category": "herbal",
+      "description": "Herbal tulshi laddu with peanut and jaggery",
+      "price": "₹289",
+      "imageFolder": "images/products/tulshi-laddu",
+      "image": "1.jpg",
+      "images": [
+        "1.jpg",
+        "2.jpg",
+        "3.jpg"
+      ],
+      "fullDescription": "Tulshi laddu made with tulshi, peanut, and jaggery. A herbal traditional sweet known for immune support and seasonal wellness.",
+      "ingredients": [
+        "Tulshi",
+        "Peanut",
+        "Jaggery"
+      ],
+      "benefits": [
+        "Natural Immune Booster",
+        "Antibacterial and Antiviral Properties",
+        "Helps in Cold and Flu Support",
+        "Tulshi is Known as the Queen of Herbs"
+      ]
+    },
+    {
+      "id": 16,
+      "name": "Chocolate Laddu",
+      "category": "traditional",
+      "description": "Chocolate laddu with cocoa, peanut, and jaggery",
+      "price": "₹299",
+      "imageFolder": "images/products/chocolate_ladoo",
+      "image": "1.jpeg",
+      "images": [
+        "1.jpeg",
+        "2.jpeg",
+        "3.jpeg"
+      ],
+      "fullDescription": "Chocolate laddu made with cocoa powder, peanut, and jaggery. A flavorful fusion sweet with antioxidant-rich ingredients and natural energy support.",
+      "ingredients": [
+        "Cocoa Powder",
+        "Peanut",
+        "Jaggery"
+      ],
+      "benefits": [
+        "Rich in Vitamins and Minerals",
+        "Acts as an Antioxidant Source",
+        "Helps Relieve Stress",
+        "Supports Brain Function"
+      ]
+    },
+    {
+      "id": 17,
+      "name": "Dryfruit Laddu",
+      "category": "traditional",
+      "description": "Premium dryfruit laddu packed with nuts, seeds, and natural sweetness",
+      "price": "₹449",
+      "imageFolder": "images/products/dryfruit_ladoo",
+      "image": "1.jpeg",
+      "images": [
+        "1.jpeg",
+        "2.jpeg",
+        "3.jpeg"
+      ],
+      "fullDescription": "Dryfruit laddu made with kaju, almond, dink, dates, coconut, kharik, ghee, and jaggery. A nutrient-dense traditional sweet that supports immunity, bone strength, and brain health.",
+      "ingredients": [
+        "Kaju (Cashew)",
+        "Almond",
+        "Dink (Gond)",
+        "Dates",
+        "Coconut",
+        "Kharik",
+        "Ghee",
+        "Jaggery"
+      ],
+      "benefits": [
+        "Enhances Immunity and Helps Strengthen Bones",
+        "Supports Brain Function",
+        "Supports Healthy Cardiovascular Function",
+        "Rich in Antioxidants and Vitamins"
+      ]
+    },
+    {
+      "id": 18,
+      "name": "Sugar Free Dryfruit Laddu",
+      "category": "traditional",
+      "description": "Sugar-free dryfruit laddu with nuts, seeds, and natural date sweetness",
+      "price": "₹499",
+      "imageFolder": "images/products/sugar-free-dryfruit-laddu",
+      "image": "1.jpg",
+      "images": [
+        "1.jpg",
+        "2.jpg",
+        "3.jpg"
+      ],
+      "fullDescription": "Sugar Free Dryfruit laddu made with kaju, almond, dink, poppy seed, raisins, dates, coconut, kharik, pista, magaj seed, chia seed, pumpkin seed, and ghee. A rich, naturally sweetened nutrient-dense option.",
+      "ingredients": [
+        "Kaju (Cashew)",
+        "Almond",
+        "Dink (Gond)",
+        "Poppy Seeds",
+        "Raisins",
+        "Dates",
+        "Coconut",
+        "Kharik",
+        "Pista",
+        "Magaj Seeds",
+        "Chia Seeds",
+        "Pumpkin Seeds",
+        "Ghee"
+      ],
+      "benefits": [
+        "No Refined Sugar",
+        "Rich in Healthy Fats, Fiber, and Micronutrients",
+        "Supports Energy and Daily Nutrition",
+        "Antioxidant-Rich Nuts and Seeds Blend"
+      ]
+    },
+    {
+      "id": 19,
+      "name": "Bajri Laddu",
+      "category": "millet",
+      "description": "Warm and nourishing bajri laddu with ghee, nuts, and cardamom",
+      "price": "₹319",
+      "imageFolder": "images/products/bajri-laddu",
+      "image": "1.jpg",
+      "images": [
+        "1.jpg",
+        "2.jpg",
+        "3.jpg"
+      ],
+      "fullDescription": "Bajri laddu made with bajri, ghee, kaju, almond, and cardamom. A traditional millet sweet especially preferred in winter for energy and nutrition.",
+      "ingredients": [
+        "Bajri",
+        "Ghee",
+        "Kaju (Cashew)",
+        "Almond",
+        "Cardamom"
+      ],
+      "benefits": [
+        "Supports Digestion, Heart Health and Immunity",
+        "Warm Food Ideal for Winter",
+        "Rich in Calcium and Magnesium",
+        "High Fiber with Sustained Energy"
+      ]
+    },
+    {
+      "id": 20,
+      "name": "Sugar Free Nachni Laddu",
+      "category": "millet",
+      "description": "Sugar-free nachni laddu with dates, nuts, ghee, and cardamom",
+      "price": "₹359",
+      "imageFolder": "images/products/sugar-free-nachni-laddu",
+      "image": "1.jpg",
+      "images": [
+        "1.jpg",
+        "2.jpg",
+        "3.jpg"
+      ],
+      "fullDescription": "Sugar Free Nachni laddu made with nachni, dates, kaju, almond, ghee, and cardamom. A diabetic-friendly millet option with sustained energy and balanced nutrition.",
+      "ingredients": [
+        "Nachni (Ragi)",
+        "Dates",
+        "Kaju (Cashew)",
+        "Almond",
+        "Ghee",
+        "Cardamom"
+      ],
+      "benefits": [
+        "Diabetic Friendly",
+        "High Fiber Supports Weight Management",
+        "Energy Booster and Nutritious",
+        "Rich in Calcium, Iron, Protein and Fiber"
+      ]
+    },
+    {
+      "id": 21,
+      "name": "Bel Laddu",
+      "category": "herbal",
+      "description": "Traditional bel fruit laddu with herbal goodness",
+      "price": "₹329",
+      "imageFolder": "images/products/bel-laddu",
+      "image": "1.jpg",
+      "images": [
+        "1.jpg",
+        "2.jpg",
+        "3.jpg"
+      ],
+      "fullDescription": "Bel laddu prepared using bel fruit and traditional ingredients for a unique herbal sweet profile.",
+      "ingredients": [
+        "Bel Fruit",
+        "Bel Leaf",
+        "Peanut",
+        "Jaggery"
+      ],
+      "benefits": [
+        "Traditional Herbal Wellness Support",
+        "Naturally Nutritious Sweet Option",
+        "Digestive Support",
+        "Daily Energy Support"
+      ]
+    },
+    {
+      "id": 22,
+      "name": "Millet Laddu",
+      "category": "millet",
+      "description": "Wholesome millet laddu rich in iron and calcium",
+      "price": "₹299",
+      "imageFolder": "images/products/millet-laddu",
+      "image": "1.jpg",
+      "images": [
+        "1.jpg",
+        "2.jpg",
+        "3.jpg"
+      ],
+      "fullDescription": "Millet laddu designed for all age groups, with slow-digesting carbohydrates that provide long-lasting energy.",
+      "ingredients": [
+        "Millet Blend",
+        "Ghee",
+        "Jaggery",
         "Dry Fruits"
       ],
       "benefits": [
-        "Calcium Rich",
-        "Iron Rich",
-        "Bone Health",
-        "Energy Dense"
+        "Boosts Energy",
+        "Rich in Iron and Calcium",
+        "Supports Weight Management",
+        "Heart Friendly and Slow-Digesting Energy"
       ]
     },
-    
     {
-      "id": 4,
-      "name": "Coconut Laddu",
-      "category": "traditional",
-      "description": "Tropical coconut laddoos with subtle sweetness",
-      "price": "₹319",
-      "image": "https://images.unsplash.com/photo-1599599812534-a3e6c2839b94?w=500&q=80",
-      "fullDescription": "Delightful coconut laddoos made with fresh coconut, pure ghee, and natural jaggery. Aromatic and delicious.",
+      "id": 23,
+      "name": "Moringa Laddu",
+      "category": "herbal",
+      "description": "Nutrient-rich moringa laddu for immunity and energy",
+      "price": "₹339",
+      "imageFolder": "images/products/moringa-laddu",
+      "image": "1.jpg",
+      "images": [
+        "1.jpg",
+        "2.jpg",
+        "3.jpg"
+      ],
+      "fullDescription": "Moringa laddu with nutrient-dense ingredients to support immunity, digestion, and overall vitality.",
       "ingredients": [
-        "Fresh Coconut",
-        "Pure Ghee",
-        "Natural Jaggery",
-        "Cashews"
+        "Moringa",
+        "Ghee",
+        "Jaggery",
+        "Dry Fruits"
       ],
       "benefits": [
-        "Cooking Coconut",
-        "Healthy Fats",
-        "Good for Skin",
-        "Energy Booster"
+        "Immunity and Energy Booster",
+        "Rich in Nutrients",
+        "Supports Digestive Health",
+        "Supports Bone and Muscle Health"
+      ]
+    },
+    {
+      "id": 24,
+      "name": "Motichur Laddu",
+      "category": "traditional",
+      "description": "Classic motichur laddu made with besan and sugar",
+      "price": "₹309",
+      "imageFolder": "images/products/motichur-laddu",
+      "image": "1.jpg",
+      "images": [
+        "1.jpg",
+        "2.jpg",
+        "3.jpg"
+      ],
+      "fullDescription": "Motichur laddu prepared with besan, refined oil, and sugar, offering quick energy and festive taste.",
+      "ingredients": [
+        "Besan",
+        "Refined Oil",
+        "Sugar"
+      ],
+      "benefits": [
+        "Provides Quick Energy",
+        "Contains Protein and Fiber",
+        "Rich in Minerals",
+        "Supports Digestion with Antioxidant Components"
+      ]
+    },
+    {
+      "id": 25,
+      "name": "Urad Dal Laddu",
+      "category": "traditional",
+      "description": "Protein-rich urad dal laddu for strength and recovery",
+      "price": "₹349",
+      "imageFolder": "images/products/urad-dal-laddu",
+      "image": "1.jpg",
+      "images": [
+        "1.jpg",
+        "2.jpg",
+        "3.jpg"
+      ],
+      "fullDescription": "Urad Dal laddu traditionally consumed for strength, bone support, and postnatal nutrition.",
+      "ingredients": [
+        "Urad Dal",
+        "Ghee",
+        "Jaggery",
+        "Dry Fruits"
+      ],
+      "benefits": [
+        "Boosts Energy and Strengthens Bones",
+        "Supports Growing Children and Joint Health",
+        "Helpful in Postnatal and Pregnancy Nutrition",
+        "Supports Immunity and Skin Health"
       ]
     }
+
   ]
 }
