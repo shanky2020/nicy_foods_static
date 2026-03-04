@@ -33,12 +33,11 @@
       "category": "traditional",
       "description": "Nutritious Aaliv laddu with haliv, coconut, jaggery, and warming spices",
       "price": "₹349",
-      "imageFolder": "images/products/aaliv-laddu",
+      "imageFolder": "images/products/aaliv_ladoo",
       "image": "1.jpeg",
       "images": [
         "1.jpeg",
-        "2.jpeg",
-        "3.jpeg"
+        "2.jpeg"
       ],
       "fullDescription": "Aaliv laddu made with haliv, ghee, coconut, jaggery, cardamom, and nutmeg. Traditionally valued for nutrition, immunity support, and postnatal wellness.",
       "ingredients": [
@@ -94,12 +93,11 @@
       "category": "traditional",
       "description": "Wholesome mug laddu with ghee, jaggery, and dry fruits",
       "price": "₹339",
-      "imageFolder": "images/products/mug-laddu",
+      "imageFolder": "images/products/mug_ladoo",
       "image": "1.jpg",
       "images": [
-        "1.jpg",
-        "2.jpg",
-        "3.jpg"
+        "1.jpeg",
+        "2.jpeg"
       ],
       "fullDescription": "Mug laddu prepared using mug, ghee, jaggery, kaju, almond, and cardamom. A traditional nutritious sweet known for antioxidant support, immunity, and balanced wellness.",
       "ingredients": [
@@ -123,12 +121,12 @@
       "category": "traditional",
       "description": "Nutrient-rich paustik laddu with wheat flour, dry fruits, dink, and jaggery",
       "price": "₹379",
-      "imageFolder": "images/products/paustik-laddu",
+      "imageFolder": "images/products/paustik_ladoo",
       "image": "1.jpg",
       "images": [
-        "1.jpg",
-        "2.jpg",
-        "3.jpg"
+        "1.jpeg",
+        "2.jpeg",
+        "3.jpeg"
       ],
       "fullDescription": "Paustik laddu made with wheat flour, kaju, almond, dink, kharik, coconut, ghee, jaggery, and cardamom. A wholesome traditional sweet packed with essential nutrients for daily nourishment and energy.",
       "ingredients": [
@@ -155,12 +153,11 @@
       "category": "traditional",
       "description": "Traditional methi laddu with dry fruits, dink, ghee, and jaggery",
       "price": "₹359",
-      "imageFolder": "images/products/methi-laddu",
-      "image": "1.jpg",
+      "imageFolder": "images/products/methi_ladoo",
+      "image": "1.jpeg",
       "images": [
-        "1.jpg",
-        "2.jpg",
-        "3.jpg"
+        "1.jpeg",
+        "2.jpeg"
       ],
       "fullDescription": "Methi laddu made with methi, kaju, kharik, wheat flour, almond, coconut, dink, cardamom, ghee, and jaggery. A nourishing traditional recipe known for post-pregnancy support and daily wellness.",
       "ingredients": [
@@ -188,12 +185,11 @@
       "category": "traditional",
       "description": "Sugar-free methi laddu with dates, raisins, seeds, dry fruits, and ghee",
       "price": "₹389",
-      "imageFolder": "images/products/sugar-free-methi-laddu",
+      "imageFolder": "images/products/sugarfree_methi_ladoo",
       "image": "1.jpg",
       "images": [
-        "1.jpg",
-        "2.jpg",
-        "3.jpg"
+        "1.jpeg",
+        "2.jpeg"
       ],
       "fullDescription": "Sugar Free Methi laddu made with methi, kharik, coconut, wheat flour, dink, raisins, dates, kaju, almond, poppy seeds, ghee, and cardamom. A naturally sweetened traditional option for balanced nutrition.",
       "ingredients": [
@@ -280,12 +276,12 @@
       "category": "traditional",
       "description": "Light and crunchy murmura laddu sweetened with jaggery",
       "price": "₹229",
-      "imageFolder": "images/products/murmura-laddu",
+      "imageFolder": "images/products/murmura_ladoo",
       "image": "1.jpg",
       "images": [
-        "1.jpg",
-        "2.jpg",
-        "3.jpg"
+        "1.jpeg",
+        "2.jpeg",
+        "3.jpeg"
       ],
       "fullDescription": "Murmura laddu made with puffed rice (murmura) and jaggery. A light traditional sweet known for quick energy and everyday snacking.",
       "ingredients": [
@@ -305,12 +301,11 @@
       "category": "millet",
       "description": "Nutritious rajgira laddu with natural jaggery sweetness",
       "price": "₹249",
-      "imageFolder": "images/products/rajgira-laddu",
+      "imageFolder": "images/products/rajgira_ladoo",
       "image": "1.jpg",
       "images": [
-        "1.jpg",
-        "2.jpg",
-        "3.jpg"
+        "1.jpeg",
+        "2.jpeg"
       ],
       "fullDescription": "Rajgira laddu made with rajgira and jaggery. A simple, nourishing traditional sweet valued for protein, fiber, minerals, and heart-friendly nutrition.",
       "ingredients": [
@@ -330,12 +325,10 @@
       "category": "traditional",
       "description": "Energy booster peanut laddu made with jaggery and no added sugar",
       "price": "₹299",
-      "imageFolder": "images/products/peanut-laddu",
+      "imageFolder": "images/products/peanut_ladoo",
       "image": "1.jpg",
       "images": [
-        "1.jpg",
-        "2.jpg",
-        "3.jpg"
+        "1.jpeg"
       ],
       "fullDescription": "Traditional peanut laddu prepared with peanut and jaggery. A simple, nutritious sweet that supports daily energy and overall wellness.",
       "ingredients": [
@@ -355,12 +348,11 @@
       "category": "traditional",
       "description": "Calcium-rich til laddu with sesame, peanut, and jaggery",
       "price": "₹259",
-      "imageFolder": "images/products/til-sesame-laddu",
-      "image": "1.jpg",
+      "imageFolder": "images/products/til_ladoo",
+      "image": "1.jpeg",
       "images": [
-        "1.jpg",
-        "2.jpg",
-        "3.jpg"
+        "1.jpeg",
+        "2.jpeg"
       ],
       "fullDescription": "Til (sesame) laddu made with sesame seeds, peanut, and jaggery. A traditional winter favorite known for calcium, minerals, and gut-friendly fiber.",
       "ingredients": [
@@ -381,12 +373,11 @@
       "category": "traditional",
       "description": "Nutritious beetroot laddu with peanut and jaggery",
       "price": "₹279",
-      "imageFolder": "images/products/beet_ladoo",
-      "image": "1.jpg",
+      "imageFolder": "images/products/beetroot_ladoo",
+      "image": "1.jpeg",
       "images": [
-        "1.jpg",
-        "2.jpg",
-        "3.jpg"
+        "1.jpeg",
+        "2.jpeg"
       ],
       "fullDescription": "Beetroot laddu made with beetroot, peanut, and jaggery. A vibrant traditional sweet known for energy support and wellness-focused nutrition.",
       "ingredients": [
@@ -407,12 +398,12 @@
       "category": "herbal",
       "description": "Herbal tulshi laddu with peanut and jaggery",
       "price": "₹289",
-      "imageFolder": "images/products/tulshi-laddu",
+      "imageFolder": "images/products/tulshi_ladoo",
       "image": "1.jpg",
       "images": [
-        "1.jpg",
-        "2.jpg",
-        "3.jpg"
+        "1.jpeg",
+        "2.jpeg",
+        "3.jpeg"
       ],
       "fullDescription": "Tulshi laddu made with tulshi, peanut, and jaggery. A herbal traditional sweet known for immune support and seasonal wellness.",
       "ingredients": [
@@ -490,12 +481,11 @@
       "category": "traditional",
       "description": "Sugar-free dryfruit laddu with nuts, seeds, and natural date sweetness",
       "price": "₹499",
-      "imageFolder": "images/products/sugar-free-dryfruit-laddu",
-      "image": "1.jpg",
+      "imageFolder": "images/products/sugarfree_dryfruit_ladoo",
+      "image": "1.jpeg",
       "images": [
-        "1.jpg",
-        "2.jpg",
-        "3.jpg"
+        "1.jpeg",
+        "2.jpeg"
       ],
       "fullDescription": "Sugar Free Dryfruit laddu made with kaju, almond, dink, poppy seed, raisins, dates, coconut, kharik, pista, magaj seed, chia seed, pumpkin seed, and ghee. A rich, naturally sweetened nutrient-dense option.",
       "ingredients": [
